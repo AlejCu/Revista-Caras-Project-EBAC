@@ -4,24 +4,6 @@ $caras-main-color: #ED1E1E;
 $caras-secondary-color:  #FFF;
 
 
-@font-face {
-    font-family: Playfair;
-    src: url(media/Playfair-display-Regular.ttf);
-}
-
-
-@font-face {
-    font-family: Barlow-light;
-    src: url(media/Barlow-light.ttf);
-}
-
-
-@font-face {
-    font-family: Barlow-bold;
-    src: url(media/Barlow-bold.ttf);
-}
-
-
 /* Use for any titles to make a specific section stand out */
 
 @mixin main-title-template {
