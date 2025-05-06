@@ -1,0 +1,89 @@
+/* Main Approved Color Scheme */
+/* Use for any titles to make a specific section stand out */
+fieldset {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 150px;
+  padding: 5px;
+}
+
+#submitButton {
+  margin-top: 15px;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  background-color: #FFF;
+  cursor: pointer;
+  border: 1px solid #1a1919;
+  font-family: Barlow-light;
+  font-size: 15px;
+}
+#submitButton:hover {
+  background-color: #ED1E1E;
+  color: #FFF;
+  transition: 0.1s ease-in-out;
+}
+
+.newsletter-main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #eeece7;
+  align-items: center;
+}
+.newsletter-main-container #newsletter-img {
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.newsletter-main-container #newsletter-img h1, .newsletter-main-container #newsletter-img p {
+  text-align: center;
+}
+
+.newsletter__not-valid, .newsletter__valid {
+  color: #ED1E1E;
+  font-size: 0.9em;
+  margin-top: 10px;
+  text-align: center;
+  padding: 2px;
+  width: 150px;
+}
+
+.newsletter__valid {
+  color: #000000;
+}
+
+article {
+  width: auto;
+  padding: 20px;
+}
+article section {
+  margin: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.newsletter-form h1 {
+  font-size: 1.8em;
+}
+
+#newsletter-section {
+  padding: 0;
+}
+#newsletter-section h1, #newsletter-section p {
+  text-align: center;
+}
+#newsletter-section .newsletter-text {
+  padding: 20px;
+}/*# sourceMappingURL=newsletter.css.map */

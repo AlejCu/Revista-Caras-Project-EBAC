@@ -1,3 +1,5 @@
+import './footer.css'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
@@ -8,35 +10,35 @@ function Footer () {
   return (
     <footer>
 
-        <div class="footer-first-section">
+        <div className="footer-first-section">
 
             <img src={ carasLogo1 } alt="Caras Logo" id="footer-logo"/>
 
-            <div class="contact-info">
+            <div className="contact-info">
                 <h1 id="footer-contact-us">CONTACTANOS</h1>
-                <p class="footer-text">55-3333-4444</p>
-                <p class="footer-text">carasrevista@email.com</p>
+                <p className="footer-text">55-3333-4444</p>
+                <p className="footer-text">carasrevista@email.com</p>
             </div>
 
-            <div class="footer-media-section">
-                <a href="https://www.facebook.com/Revista.Caras" target="_blank" rel="noreferrer noopener" class="social-media-icons-footer">
+            <div className="footer-media-section">
+                <a href="https://www.facebook.com/Revista.Caras" target="_blank" rel="noreferrer noopener" className="social-media-icon-red">
                     <FontAwesomeIcon icon={faFacebookF} />
                 </a>
 
-                <a href="https://www.instagram.com/carasmexico/" target="_blank" rel="noreferrer noopener" class="social-media-icons-footer">
+                <a href="https://www.instagram.com/carasmexico/" target="_blank" rel="noreferrer noopener" className="social-media-icon-red">
                     <FontAwesomeIcon icon={faInstagram} />
                 </a>
 
-                <a href="https://twitter.com/carasmexico" target="_blank" rel="noreferrer noopener" class="social-media-icons-footer">
+                <a href="https://twitter.com/carasmexico" target="_blank" rel="noreferrer noopener" className="social-media-icon-red">
                     <FontAwesomeIcon icon={faXTwitter} />
                 </a>
             </div>
 
         </div>
 
-        <div class="footer-second-section">
+        <div className="footer-second-section">
             
-            <p class="footer-text">EDITORIAL TELEVISA S.A. DE C.V. TODOS LOS DERECHOS RESERVADOS. TBG - EDITORIAL TELEVISA - ENTERTAINMENT - NEWS</p>
+            <p className="footer-text">EDITORIAL TELEVISA S.A. DE C.V. TODOS LOS DERECHOS RESERVADOS. TBG - EDITORIAL TELEVISA - ENTERTAINMENT - NEWS</p>
 
         </div>
 

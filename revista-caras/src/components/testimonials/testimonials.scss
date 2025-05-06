@@ -1,0 +1,32 @@
+@import "../../theme/_base";
+
+.testimonials {
+
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    overflow-x: auto;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+
+        #testimonials-title {
+
+            @include main-title-template;
+        }
+        
+        .user-review-icon {
+            width: 70px;
+            height: 70px;
+        }
+        
+        .testimonials section {
+            margin: 25px;
+        }
+}
+
+.testimonial-card {
+    min-width: 300px;
+    max-width: 300px;
+    flex: 0 0 auto;
+}

@@ -1,8 +1,45 @@
+import './newsletter.css'
+import newsletterCover from '../../media/caras-cover-newsletter.png';
+
+import { useState } from 'react';
+
 function Newsletter() {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [validationMessage, setValidationMessage] = useState('');
+    const [isValid, setIsValid] = useState(false);
+
+    const handleNameChange = (event) => {
+        setName(event.target.value);
+      };
+
+      const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+        if (event.target.value.includes('@') && event.target.value.includes('.')) {
+          setValidationMessage('Correo válido');
+          setIsValid(true);
+        } else {
+          setValidationMessage('Introduce un correo válido');
+          setIsValid(false);
+        }
+      };
+
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        if (email.includes('@') && email.includes('.') && name.trim() !== '') {
+          setValidationMessage('¡Gracias por suscribirte!');
+          setIsValid(true);
+        } else {
+          setValidationMessage('Introduce un correo válido y un nombre');
+          setIsValid(false);
+        }
+      };
+
   return (
     <article id="newsletter-section">
 
-        <section class="newsletter-text">
+        <section className="newsletter-text">
 
             <h1>Subscribete a nuestro newsletter</h1>
 
@@ -10,30 +47,47 @@ function Newsletter() {
 
         </section>
 
-        <section class="newsletter-main-container">
+        <section className="newsletter-main-container">
 
-            <div class="newsletter-img-container">
+            <div className="newsletter-img-container">
 
-                <img src="media/caras-cover-newsletter.png" alt="Portada de la revista Caras" id="newsletter-img"/>
+                <img src={newsletterCover} alt="Portada de la revista Caras" id="newsletter-img"/>
 
             </div>
 
 
-            <div class="newsletter-form">
+            <div className="newsletter-form">
 
                 <h1>Newsletter</h1>
 
-                <form action="/EBAC-Proyecto-CARAS/index.html">
+                <form aconSubmit={handleSubmit}>
 
                     <fieldset>
 
-                        <label for="name-subs">Nombre:</label>
-                        <input type="text" name="name-subs" id="nameSubs"></input>
+                        <label htmlFor="name-subs">Nombre:</label>
+                        <input 
+                        type="text" 
+                        name="name-subs" 
+                        id="nameSubs" 
+                        value={name} 
+                        onChange={handleNameChange}/>
+                        
 
-                        <label for="email-subs">Correo:</label>
-                        <input type="email" name="email-subs" id="emailSubs"></input>
+                        <label htmlFor="email-subs">Correo:</label>
+                        <input 
+                        type="email" 
+                        name="email-subs" 
+                        id="emailSubs" 
+                        value={email} 
+                        onChange={handleEmailChange}/>
 
-                        <span class="newsletter__valid" id="newsletter__validation"></span>
+                        <span 
+                        className={isValid ? 'newsletter__valid' : 'newsletter__not-valid'} 
+                        id="newsletter__validation">
+
+                            {validationMessage}
+
+                        </span>
 
                         <input type="submit" value="Enviar" id="submitButton"></input>
 
