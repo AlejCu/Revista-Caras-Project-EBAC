@@ -1,6 +1,8 @@
-@import "../../theme/_base";
+import styled from 'styled-components';
+import { MainTitleTemplate } from '../../theme/mixins';
 
-.testimonials {
+export const TestimonialsSection = styled.section`
+    .testimonials {
 
     display: flex;
     flex-direction: row;
@@ -11,8 +13,7 @@
     position: relative;
 
         #testimonials-title {
-
-            @include main-title-template;
+            ${MainTitleTemplate}
         }
         
         .user-review-icon {
@@ -29,4 +30,6 @@
     min-width: 300px;
     max-width: 300px;
     flex: 0 0 auto;
+    padding-right: 20px;
 }
+`;

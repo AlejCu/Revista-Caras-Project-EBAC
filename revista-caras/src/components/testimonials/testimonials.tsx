@@ -1,4 +1,4 @@
-import './testimonials.css';
+import { TestimonialsSection } from './testimonialsStyles';
 
 //FontAwesome imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -46,7 +46,7 @@ const testimonialsData = [
     
     return (
 
-      <article>
+      <TestimonialsSection>
 
         <h1 id="testimonials-title">Testimonios</h1>
 
@@ -68,7 +68,7 @@ const testimonialsData = [
 
         </div>
 
-      </article>
+      </TestimonialsSection>
     );
 
   }

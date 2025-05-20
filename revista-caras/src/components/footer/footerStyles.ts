@@ -1,7 +1,7 @@
-@import "../../theme/_base";
+import styled from 'styled-components';
 
-footer {
-    
+export const FooterSection = styled.footer`
+
     background-color: #fbfbfb;
     padding: 10px;
 
@@ -37,10 +37,4 @@ footer {
             display: flex;
             text-align: center;
         }
-
-}
-
-.social-media-icons-footer {
-    
-    @include social-media-icon-red;
-}
+`;

@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, MutableRefObject } from 'react';
 
-function useAutoScroll(speed = 1, interval = 20) {
-  const containerRef = useRef(null);
-  const scrollIntervalRef = useRef(null);
+function useAutoScroll(speed = 1, interval = 20): MutableRefObject<HTMLDivElement | null> {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const scrollIntervalRef = useRef<number | null>(null);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -17,7 +17,7 @@ function useAutoScroll(speed = 1, interval = 20) {
     // Function to start auto-scrolling
     const startAutoScroll = () => {
       if (scrollIntervalRef.current) return; 
-      scrollIntervalRef.current = setInterval(() => {
+      scrollIntervalRef.current = window.setInterval(() => {
         if (container) {
           container.scrollLeft += speed;
 
@@ -31,12 +31,14 @@ function useAutoScroll(speed = 1, interval = 20) {
 
     // Function to stop auto-scrolling
     const stopAutoScroll = () => {
-      clearInterval(scrollIntervalRef.current);
-      scrollIntervalRef.current = null; 
+      if (scrollIntervalRef.current !== null) {
+        clearInterval(scrollIntervalRef.current);
+        scrollIntervalRef.current = null;
+      }
     };
 
     // Function to handle mouse wheel scrolling
-    const handleMouseWheel = (event) => {
+    const handleMouseWheel = (event: WheelEvent) => {
       event.preventDefault(); 
       container.scrollLeft += event.deltaY;
     };
@@ -51,7 +53,7 @@ function useAutoScroll(speed = 1, interval = 20) {
 
     
     return () => {
-      clearInterval(scrollIntervalRef.current);
+      if (scrollIntervalRef.current !== null) clearInterval(scrollIntervalRef.current);
       if (container) {
         container.removeEventListener('mouseenter', stopAutoScroll);
         container.removeEventListener('mouseleave', startAutoScroll);

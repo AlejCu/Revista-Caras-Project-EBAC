@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+import { Theme } from '.';
 
 
 const GlobalStyles = createGlobalStyle`
@@ -10,8 +10,8 @@ html {
 }
 
   :root {
-    --caras-main-color: ${props => props.theme.colors.primary};
-    --caras-secondary-color: ${props => props.theme.colors.secondary};
+    margin: 0;
+    padding: 0;
 }
 
   @font-face {
@@ -44,7 +44,7 @@ h1 {
     font-family: Barlow-bold;
     font-weight: bold;
     text-align: center;
-    color: $caras-main-color;
+    color: ${Theme.colors.primary};
 }
 
 h2 {

@@ -1,7 +1,6 @@
-import './newsletter.css'
-import newsletterCover from '../../media/caras-cover-newsletter.png';
+import { NewsLetterSection } from './newsletterStyles';
 
-import { useState } from 'react';
+import { ChangeEvent, useState, FormEvent } from 'react';
 
 function Newsletter() {
 
@@ -10,11 +9,11 @@ function Newsletter() {
     const [validationMessage, setValidationMessage] = useState('');
     const [isValid, setIsValid] = useState(false);
 
-    const handleNameChange = (event) => {
+    const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
         setName(event.target.value);
       };
 
-      const handleEmailChange = (event) => {
+      const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
         if (event.target.value.includes('@') && event.target.value.includes('.')) {
           setValidationMessage('Correo válido');
@@ -25,7 +24,7 @@ function Newsletter() {
         }
       };
 
-      const handleSubmit = (event) => {
+      const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         if (email.includes('@') && email.includes('.') && name.trim() !== '') {
           setValidationMessage('¡Gracias por suscribirte!');
@@ -37,7 +36,7 @@ function Newsletter() {
       };
 
   return (
-    <article id="newsletter-section">
+    <NewsLetterSection>
 
         <section className="newsletter-text">
 
@@ -51,7 +50,7 @@ function Newsletter() {
 
             <div className="newsletter-img-container">
 
-                <img src={newsletterCover} alt="Portada de la revista Caras" id="newsletter-img"/>
+                <img src="/media/caras-cover-newsletter.png"  alt="Portada de la revista Caras" id="newsletter-img"/>
 
             </div>
 
@@ -60,7 +59,7 @@ function Newsletter() {
 
                 <h1>Newsletter</h1>
 
-                <form aconSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
 
                     <fieldset>
 
@@ -99,7 +98,7 @@ function Newsletter() {
 
         </section>
 
-    </article>
+    </NewsLetterSection>
   );
 }
 

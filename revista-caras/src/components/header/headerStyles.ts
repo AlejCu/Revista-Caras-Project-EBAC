@@ -1,7 +1,8 @@
-@import "../../theme/_base";
+import styled from 'styled-components';
+import { Theme } from '../../theme';
 
-header {
-    background-color: $caras-main-color;
+export const HeaderStyles = styled.header`
+    background-color: ${Theme.colors.primary};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,16 +35,17 @@ header {
             text-decoration: none;
             margin: 10px;
             font-family: Playfair;
-            color: $caras-secondary-color;
+            color: ${Theme.colors.secondary};
             font-weight: bold;
             padding: 5px;
 
             &:hover {
-                color: $caras-main-color;
-                background-color: $caras-secondary-color;
+                color: ${Theme.colors.primary};
+                background-color: ${Theme.colors.secondary};
                 border-radius: 5px;
+                transition: .1s ease-in-out;
             }
         }
     
     }
-}
+`;

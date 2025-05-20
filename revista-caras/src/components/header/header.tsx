@@ -1,18 +1,16 @@
-import './header.css';
+import { HeaderStyles } from './headerStyles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-
-import carasLogo2 from '../../media/Logo-2.png';
 
 
 function Header() {
   return (
 
     <>
-        <header>
+        <HeaderStyles>
             <a href="#newsletter-section" rel="noreferrer noopener">
-                <img src={ carasLogo2 } alt="Caras Logo" className="nav-img" id="header-logo"/>
+                <img src="/media/Logo-2.png" alt="Caras Logo" className="nav-img" id="header-logo"/>
             </a>
 
             <nav>
@@ -45,7 +43,7 @@ function Header() {
                 </a>
             </nav>
 
-        </header>
+        </HeaderStyles>
     </>
   );
 }
