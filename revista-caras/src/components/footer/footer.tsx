@@ -1,18 +1,16 @@
-import './footer.css'
+import { FooterSection } from './footerStyles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
-import carasLogo1 from '../../media/Logo-1.png';
-
 
 function Footer () {
   return (
-    <footer>
+    <FooterSection>
 
         <div className="footer-first-section">
 
-            <img src={ carasLogo1 } alt="Caras Logo" id="footer-logo"/>
+            <img src="/media/Logo-1.png" alt="Caras Logo" id="footer-logo"/>
 
             <div className="contact-info">
                 <h1 id="footer-contact-us">CONTACTANOS</h1>
@@ -42,7 +40,7 @@ function Footer () {
 
         </div>
 
-    </footer>
+    </FooterSection>
 
   );
 }

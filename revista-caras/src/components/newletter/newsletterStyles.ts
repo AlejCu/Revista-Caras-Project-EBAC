@@ -1,6 +1,9 @@
-@import "../../theme/_base";
+import styled from 'styled-components';
+import { Theme } from '../../theme';
+import { SubmitButton } from '../../theme/mixins';
 
-fieldset {
+export const NewsLetterSection = styled.section`
+    fieldset {
     border: 0;
     display: flex;
     flex-direction: column;
@@ -12,7 +15,7 @@ input {
 }
 
 #submitButton {
-    @include submit-button
+    ${SubmitButton};
 }
 
 
@@ -40,7 +43,7 @@ input {
 
 
 .newsletter__not-valid {
-    color: $caras-main-color;
+    color: ${Theme.colors.primary};
     font-size: 0.9em;
     margin-top: 10px;
     text-align: center;
@@ -75,16 +78,10 @@ article {
         }
 }
 
-
-
-#newsletter-section {
-    padding: 0;
-
-        h1, p {
-            text-align: center;
-        }
         
-        .newsletter-text{
-            padding: 20px;
-        }
+    .newsletter-text{
+        padding: 20px;
+        text-align: center;
+    }
 }
+`;

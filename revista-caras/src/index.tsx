@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client'; 
 
 //import components
 import { Header } from './components/header/header';
@@ -8,11 +8,13 @@ import { Newsletter } from './components/newletter/newsletter';
 import { Testimonials } from './components/testimonials/testimonials';
 
 import { ThemeProvider } from 'styled-components';
-import Theme from './theme';
+import { Theme } from './theme';
 import GlobalStyles from './theme/globalStyles';
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById('root');
+if (!rootElement) throw new Error('No root element found');
+const root = ReactDOM.createRoot(rootElement);
 root.render(
   <>
 
