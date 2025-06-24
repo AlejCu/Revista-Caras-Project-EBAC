@@ -63,7 +63,7 @@ function Newsletter() {
 
                     <fieldset>
 
-                        <label htmlFor="name-subs">Nombre:</label>
+                        <label htmlFor="nameSubs">Nombre:</label>
                         <input 
                         type="text" 
                         name="name-subs" 
@@ -72,7 +72,7 @@ function Newsletter() {
                         onChange={handleNameChange}/>
                         
 
-                        <label htmlFor="email-subs">Correo:</label>
+                        <label htmlFor="emailSubs">Correo:</label>
                         <input 
                         type="email" 
                         name="email-subs" 
