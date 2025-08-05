@@ -10,7 +10,7 @@ function Header() {
     <>
         <HeaderStyles>
             <a href="#newsletter-section" rel="noreferrer noopener">
-                <img src="/media/Logo-2.png" alt="Caras Logo" className="nav-img" id="header-logo"/>
+                <img src="/media/Logo-2.png" alt="Logo blanco con el texto de la revista CARAS" className="nav-img" id="header-logo"/>
             </a>
 
             <nav>
@@ -31,15 +31,15 @@ function Header() {
                 <a href="https://www.caras.com.mx/revista" target="_blank" rel="noreferrer noopener" className="nav-header-links">Revista</a>
 
                 <a href="https://www.facebook.com/Revista.Caras" target="_blank" rel="noreferrer noopener" className="social-media-icon-white">
-                    <FontAwesomeIcon icon={faFacebookF} />
+                    <FontAwesomeIcon icon={faFacebookF} aria-label='Boton de mavegacion facebook' />
                 </a>
 
                 <a href="https://www.instagram.com/carasmexico/" target="_blank" rel="noreferrer noopener" className="social-media-icon-white">
-                    <FontAwesomeIcon icon={faInstagram} />
+                    <FontAwesomeIcon icon={faInstagram} aria-label='Boton de mavegacion instagram' />
                 </a>
 
                 <a href="https://twitter.com/carasmexico" target="_blank" rel="noreferrer noopener" className="social-media-icon-white">
-                    <FontAwesomeIcon icon={faXTwitter} />
+                    <FontAwesomeIcon icon={faXTwitter} aria-label='Boton de mavegacion twitter'/>
                 </a>
             </nav>
 
