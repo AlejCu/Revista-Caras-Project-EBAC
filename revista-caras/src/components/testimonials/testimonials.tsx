@@ -54,7 +54,7 @@ const testimonialsData = [
 
           {duplicatedTestimonials.map((testimonial, index) => (
 
-            <section key={index} className='testimonial-card'>
+            <div key={index} className='testimonial-card'>
 
               <FontAwesomeIcon icon={faUser} className="user-review-icon" />
 
@@ -62,7 +62,7 @@ const testimonialsData = [
 
               <p>{testimonial.content}</p>
 
-            </section>
+            </div>
 
           ))}
 

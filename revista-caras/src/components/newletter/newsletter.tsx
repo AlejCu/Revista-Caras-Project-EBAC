@@ -38,19 +38,19 @@ function Newsletter() {
   return (
     <NewsLetterSection>
 
-        <section className="newsletter-text">
+        <article className="newsletter-text">
 
             <h1>Subscribete a nuestro newsletter</h1>
 
             <p>Mantente al tanto de las ultimas tendencias de moda y las mejores noticias del mundo del entretenimiento ¡Suscríbete ahora para recibir las últimas noticias, tendencias y consejos directamente en tu bandeja de entrada!</p>
 
-        </section>
+        </article>
 
-        <section className="newsletter-main-container">
+        <article className="newsletter-main-container">
 
             <div className="newsletter-img-container">
 
-                <img src="/media/caras-cover-newsletter.png"  alt="Portada de la revista Caras" id="newsletter-img"/>
+                <img src="/media/caras-cover-newsletter.png"  alt="Portada de la revista CARAS edicion Mayo 2024" id="newsletter-img"/>
 
             </div>
 
@@ -96,7 +96,7 @@ function Newsletter() {
 
             </div>
 
-        </section>
+        </article>
 
     </NewsLetterSection>
   );

@@ -35,12 +35,12 @@ export const HeaderStyles = styled.header`
             text-decoration: none;
             margin: 10px;
             font-family: Playfair;
-            color: ${Theme.colors.secondary};
+            color: #000000;
             font-weight: bold;
             padding: 5px;
 
             &:hover {
-                color: ${Theme.colors.primary};
+                color: #df0000;
                 background-color: ${Theme.colors.secondary};
                 border-radius: 5px;
                 transition: .1s ease-in-out;
