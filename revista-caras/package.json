@@ -1,4 +1,5 @@
 {
+  "homepage": "https://AlejCu.github.io/Revista-Caras-Project-EBAC",
   "name": "revista-caras",
   "version": "0.1.0",
   "private": true,
@@ -20,6 +21,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -47,6 +50,7 @@
     "@types/jest": "^30.0.0",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
+    "gh-pages": "^6.3.0",
     "jest": "^27.5.1",
     "typescript": "^4.9.5"
   }
