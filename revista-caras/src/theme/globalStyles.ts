@@ -16,19 +16,19 @@ html {
 
   @font-face {
     font-family: Playfair;
-    src: url(../media/Playfair-display-Regular.ttf);
+    src: url('${process.env.PUBLIC_URL}/media/Playfair-display-Regular.ttf');
 }
 
 
 @font-face {
     font-family: Barlow-light;
-    src: url(../media/Barlow-light.ttf);
+    src: url('${process.env.PUBLIC_URL}/media/Barlow-light.ttf');
 }
 
 
 @font-face {
     font-family: Barlow-bold;
-    src: url(../media/Barlow-bold.ttf);
+    src: url('${process.env.PUBLIC_URL}/media/Barlow-bold.ttf');
 }
   
 body {
