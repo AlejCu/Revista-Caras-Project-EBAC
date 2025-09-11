@@ -10,7 +10,7 @@ function Header() {
     <>
         <HeaderStyles>
             <a href="#newsletter-section" rel="noreferrer noopener">
-                <img src="/media/Logo-2.png" alt="Logo blanco con el texto de la revista CARAS" className="nav-img" id="header-logo"/>
+                <img src={`${process.env.PUBLIC_URL}/media/Logo-2.png`} alt="Logo blanco con el texto de la revista CARAS" className="nav-img" id="header-logo"/>
             </a>
 
             <nav>

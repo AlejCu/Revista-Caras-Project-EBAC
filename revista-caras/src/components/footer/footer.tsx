@@ -10,7 +10,7 @@ function Footer () {
 
         <div className="footer-first-section">
 
-            <img src="/media/Logo-1.png" alt="Logo rojo con el texto de la revista CARAS" id="footer-logo"/>
+                <img src={`${process.env.PUBLIC_URL}/media/Logo-1.png`} alt="Logo rojo con el texto de la revista CARAS" id="footer-logo"/>
 
             <div className="contact-info">
                 <h1 id="footer-contact-us">CONTACTANOS</h1>

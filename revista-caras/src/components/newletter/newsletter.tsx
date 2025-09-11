@@ -50,7 +50,7 @@ function Newsletter() {
 
             <div className="newsletter-img-container">
 
-                <img src="/media/caras-cover-newsletter.png"  alt="Portada de la revista CARAS edicion Mayo 2024" id="newsletter-img"/>
+                <img src={`${process.env.PUBLIC_URL}/media/caras-cover-newsletter.png`}  alt="Portada de la revista CARAS edicion Mayo 2024" id="newsletter-img"/>
 
             </div>
 
