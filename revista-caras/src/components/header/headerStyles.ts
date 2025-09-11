@@ -48,4 +48,10 @@ export const HeaderStyles = styled.header`
         }
     
     }
+
+    @media (max-width: 1230px) {
+        .nav-header-links {
+            display: none;
+        }
+    }
 `;

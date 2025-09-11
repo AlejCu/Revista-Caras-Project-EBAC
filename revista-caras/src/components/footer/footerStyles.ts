@@ -37,4 +37,18 @@ export const FooterSection = styled.footer`
             display: flex;
             text-align: center;
         }
+
+    @media (max-width: 765px) {
+        font-size: 0.9em;
+
+        #footer-logo {
+            width: 180px;
+        }
+    }
+
+    @media (max-width: 624px) {
+        .footer-first-section {
+            flex-direction: column;
+        }
+    }
 `;

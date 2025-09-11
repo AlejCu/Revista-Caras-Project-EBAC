@@ -84,4 +84,15 @@ article {
         text-align: center;
     }
 }
+
+@media (max-width: 722px) {
+    .newsletter-main-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .newsletter-img-container img {
+        width: 350px !important;
+    }
+}
 `;
